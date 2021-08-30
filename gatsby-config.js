@@ -1,12 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Maurice Murphy`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    menuLinks: [
+      {
+        name: `About`,
+        link: `/about`,
+      },
+      {
+        name: `Career`,
+        link: `/career`,
+      },
+      {
+        name: `Projects`,
+        link: `/projects`,
+      },
+      {
+        name: `Contact`,
+        link: `/contact`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
