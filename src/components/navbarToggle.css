@@ -1,0 +1,32 @@
+.navbarToggle {
+}
+
+.navbarToggle:focus {
+}
+
+.line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 6px 0;
+  transition: transform 0.5s, margin 0.5s;
+  background: #64ffda;
+}
+
+.line1 {
+  transform: rotateZ(45deg);
+  margin: -2px;
+}
+
+.line2 {
+  transform: rotateZ(-45deg);
+  margin: -2px;
+}
+
+@media screen and (min-width: 768px) {
+  .navbarToggle {
+    display: none;
+  }
+}
