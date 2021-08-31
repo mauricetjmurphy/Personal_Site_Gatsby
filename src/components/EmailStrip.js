@@ -13,8 +13,7 @@ const EmailContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60%;
-  color: var(--purple);
+  height: 60%; ;
 `
 
 const strip = {
@@ -24,7 +23,7 @@ const strip = {
   margin: "20px  auto",
   width: "2px",
   height: "40%",
-  background: "var(--purple)",
+  background: "var(--slate)",
   zIndex: "5",
 }
 
@@ -38,6 +37,7 @@ function EmailStrip() {
               writingMode: "vertical-rl",
               fontSize: "14px",
               textDecoration: "none",
+              color: "var(--slate)",
             }}
           >
             mauricetjmurphy@gmail.com

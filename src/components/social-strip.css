@@ -1,6 +1,7 @@
 svg {
   height: 20px !important;
   width: 20px !important;
+  color: var(--slate);
 }
 
 svg:hover {
@@ -8,5 +9,5 @@ svg:hover {
 }
 
 svg:active {
-  color: var(--purple);
+  color: var(--slate);
 }

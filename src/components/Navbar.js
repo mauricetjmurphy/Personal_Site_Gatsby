@@ -9,7 +9,7 @@ const Nav = styled.div`
   display: flex;
   align-items: center;
   height: 100px;
-  padding: 0 50px;
+  padding: 0 80px;
   background: #0a192f;
 
   @media (max-width: 768px) {

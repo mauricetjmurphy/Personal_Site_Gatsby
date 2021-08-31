@@ -1,0 +1,9 @@
+img {
+  border-radius: 5px;
+}
+
+span {
+  color: var(--slate);
+  font-size: 14px;
+  font-family: sfmono;
+}

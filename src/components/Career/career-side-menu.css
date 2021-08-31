@@ -1,0 +1,8 @@
+.active {
+  border-left: 2px solid var(--green);
+  background: var(--light-navy);
+}
+
+.not-active {
+  border-left: 2px solid var(--slate);
+}

@@ -1,23 +1,20 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Img from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import "./hero.css"
 
 const HeroContainer = styled.div`
-  height: 700px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 60px;
+  padding-top: 150px;
+  margin: 0 100px;
 `
 
 const linkItem = {
   height: "50px",
-  display: "flex",
-  alignItems: "center",
 }
 
 const Hero = () => {
@@ -44,7 +41,7 @@ const Hero = () => {
         building accessible, human-centered products that everybody can use.
       </p>
 
-      <span>
+      <span style={{ marginTop: "20px" }}>
         <Link style={linkItem} to="/">
           <StaticImage
             src="../images/down-arrow.svg"

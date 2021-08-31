@@ -17,7 +17,6 @@ const IconContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 60%;
-  color: var(--purple);
 `
 
 const strip = {
@@ -27,7 +26,7 @@ const strip = {
   margin: "20px  auto",
   width: "2px",
   height: "40%",
-  background: "var(--purple)",
+  background: "var(--slate)",
   zIndex: "5",
 }
 
@@ -35,16 +34,16 @@ function SocialStrip() {
   return (
     <SocialStripContainer>
       <IconContainer>
-        <Link to="/">
+        <Link style={{ color: "var(--slate" }} to="/">
           <VscGithub />
         </Link>
-        <Link to="/">
+        <Link style={{ color: "var(--slate" }} to="/">
           <FaInstagram />
         </Link>
-        <Link to="/">
+        <Link style={{ color: "var(--slate" }} to="/">
           <RiLinkedinFill />
         </Link>
-        <Link to="/">
+        <Link style={{ color: "var(--slate" }} to="/">
           <FaTwitter />
         </Link>
       </IconContainer>
