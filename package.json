@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Maurice Murphy",
   "engines": {
-    "node": "14.17.5"
+    "node": "16.8.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
