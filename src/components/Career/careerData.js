@@ -1,7 +1,7 @@
 const data = [
   {
     companyName: `Freelance`,
-    position: `Frontend web developer`,
+    position: `Frontend Web Developer`,
     location: `London`,
     dates: `Current position`,
     tasks: [

@@ -4,13 +4,30 @@ import { VscGithub } from "react-icons/vsc"
 import { RiLinkedinFill } from "react-icons/ri"
 import { FaTwitter, FaInstagram } from "react-icons/fa"
 import styled from "styled-components"
-import "./social-strip.css"
 
-const SocialStripContainer = styled.div`
+const SocialStripContainer = styled.section`
   position: fixed;
   height: 280px;
   left: 5%;
   bottom: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  svg {
+    height: 20px;
+    width: 20px;
+    color: var(--slate);
+  }
+
+  svg:hover {
+    opacity: 0.6;
+  }
+
+  svg:active {
+    color: var(--slate);
+  }
 `
 const IconContainer = styled.div`
   display: flex;
@@ -34,16 +51,28 @@ function SocialStrip() {
   return (
     <SocialStripContainer>
       <IconContainer>
-        <Link style={{ color: "var(--slate" }} to="/">
+        <Link
+          style={{ color: "var(--slate" }}
+          to="https://github.com/mauricetjmurphy"
+          target="_blank"
+        >
           <VscGithub />
         </Link>
-        <Link style={{ color: "var(--slate" }} to="/">
+        <Link style={{ color: "var(--slate" }} to="https://www.instagram.com">
           <FaInstagram />
         </Link>
-        <Link style={{ color: "var(--slate" }} to="/">
+        <Link
+          style={{ color: "var(--slate" }}
+          to="https://www.linkedin.com/in/maurice-tj-murphy"
+          target="_blank"
+        >
           <RiLinkedinFill />
         </Link>
-        <Link style={{ color: "var(--slate" }} to="/">
+        <Link
+          style={{ color: "var(--slate" }}
+          to="https://twitter.com"
+          target="_blank"
+        >
           <FaTwitter />
         </Link>
       </IconContainer>

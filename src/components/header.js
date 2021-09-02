@@ -1,6 +1,6 @@
 import * as React from "react"
-import Navbar from "./Navbar"
+import Seo from "./seo"
 
-const Header = ({ menuLinks }) => <Navbar menuLinks={menuLinks} />
+const Header = ({ data }) => <Seo data={data} />
 
 export default Header

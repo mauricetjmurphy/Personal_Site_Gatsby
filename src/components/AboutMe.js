@@ -1,8 +1,8 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import "./about-me.css"
 
+import Title from "./Title"
 import { FaReact } from "react-icons/fa"
 import {
   SiJavascript,
@@ -18,71 +18,162 @@ import {
   SiDocker,
 } from "react-icons/si"
 
-const AboutMeContainer = styled.div`
+const AboutMeContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
-  width: 70%;
-  height: 800px;
+  padding: 100px 0px;
+  max-width: 900px;
+
+  .gatsby-image-wrapper {
+    margin: 0 auto !important;
+    width: inherit !important;
+    height: inherit !important;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 700px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 50px 0;
+    margin: 0 5%;
+  }
+`
+
+const MainContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    padding: 0;
+    margin: 0 auto;
+  }
 `
 
 const TextContainer = styled.div`
   width: 50%;
   padding-right: 25px;
+
+  @media (max-width: 480px) {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
 `
 
 const ImageContainer = styled.div`
-  width: 50%;
-  padding-left: 50px;
-`
+  height: 300px;
+  width: 300px;
+  padding-left: 120px;
 
-const TitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 32px;
-  padding-bottom: 40px;
-`
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: 20px 0 0 20px;
+    height: 250px;
+    width: 250px;
+  }
 
-const TitleNum = styled.span`
-  font-size: 26px;
-  line-height: 32px;
-  width: 60px;
-  padding-bottom: 6px;
-  padding-right: 10px;
-  align-items: center;
-  font-family: sfmono;
-  color: var(--green);
-`
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    height: 280px;
+  }
 
-const TitleText = styled.h1`
-  font-size: 32px;
-  width: 160px;
-  line-height: 32px;
-  text-align: center;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-`
+  img {
+    border-radius: 5px;
 
-const TitleLine = styled.span`
-  height: 1px;
-  width: calc(100% - 205px);
-  margin-left: 15px;
-  background: var(--slate);
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0;
+      margin: 0 auto;
+      width: 250px;
+      height: 250px;
+    }
+  }
 `
 
 const MainText = styled.p`
   font-size: 20px;
   color: var(--slate);
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
 `
 
 const Technologies = styled.div`
   width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+
+  p {
+    color: var(--slate);
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  span {
+    color: var(--slate);
+    font-size: 14px;
+    font-family: sfmono;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+    @media (max-width: 480px) {
+      justify-content: center;
+      text-align: center;
+    }
+    @media (max-width: 350px) {
+      font-size: 12px;
+    }
+  }
 `
 
-const techItemContainer = {
-  display: "flex",
-  alignItems: "center",
-  padding: "7.5px 0",
-}
+const TechItemContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    min-height: 90px;
+  }
+
+  span {
+    @media (max-width: 768px) {
+      padding-top: 5px;
+    }
+  }
+`
 
 const techIconContainer = {
   display: "flex",
@@ -97,15 +188,11 @@ const icon = {
 function AboutMe() {
   return (
     <>
-      <AboutMeContainer>
-        <div style={{ display: "flex", alignItems: "center" }}>
+      <AboutMeContainer id="about">
+        <Title number={"00."} title={"About Me"} />
+        <MainContainer>
           <TextContainer>
             <div>
-              <TitleContainer>
-                <TitleNum>01.</TitleNum>
-                <TitleText>About Me</TitleText>
-                <TitleLine></TitleLine>
-              </TitleContainer>
               <MainText>
                 Hello! My name is Maurice and I enjoy creating things that live
                 on the internet. My interest in web development started back in
@@ -119,9 +206,6 @@ function AboutMe() {
                 student-led design studio. My main focus these days is building
                 accessible, inclusive products and digital experiences at
                 Upstatement for a variety of clients.
-                <br></br>
-                <br></br>
-                Here are a few technologies I've been working with recently:
               </MainText>
             </div>
           </TextContainer>
@@ -132,92 +216,93 @@ function AboutMe() {
               placeholder="blurred"
               layout="fixed"
               width={300}
-              height={400}
+              height={300}
             />
           </ImageContainer>
-        </div>
+        </MainContainer>
         <Technologies>
+          <p>Here are a few technologies I've been working with recently:</p>
           <div style={{ display: "flex" }}>
             <div style={{ width: "25%" }}>
-              <div style={techItemContainer}>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiJavascript style={icon} />
                 </span>
                 <span>JavaScript ES6</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiTypescript style={icon} />
                 </span>
                 <span>TypeScript</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <FaReact style={icon} />
                 </span>
                 <span>React</span>
-              </div>
+              </TechItemContainer>
             </div>
             <div style={{ width: "25%" }}>
-              <div style={techItemContainer}>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiGatsby style={icon} />
                 </span>
                 <span>Gatsby</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiGraphql style={icon} />
                 </span>
                 <span>GraphQL</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiNextDotJs style={icon} />
                 </span>
                 <span>NextJS</span>
-              </div>
+              </TechItemContainer>
             </div>
 
             <div style={{ width: "25%" }}>
-              <div style={techItemContainer}>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiPython style={icon} />
                 </span>
                 <span>Pyhton</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiDjango style={icon} />
                 </span>
                 <span>Django</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiFlask style={icon} />
                 </span>
                 <span>Flask</span>
-              </div>
+              </TechItemContainer>
             </div>
             <div style={{ width: "25%" }}>
-              <div style={techItemContainer}>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiMongodb style={icon} />
                 </span>
                 <span>MongoDB</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiPostgresql style={icon} />
                 </span>
                 <span>PostgreSQL</span>
-              </div>
-              <div style={techItemContainer}>
+              </TechItemContainer>
+              <TechItemContainer>
                 <span style={techIconContainer}>
                   <SiDocker style={icon} />
                 </span>
                 <span>Docker</span>
-              </div>
+              </TechItemContainer>
             </div>
           </div>
         </Technologies>

@@ -1,13 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
-import "./email-strip.css"
 
-const EmailStripContainer = styled.div`
+const EmailStripContainer = styled.section`
   position: fixed;
   height: 280px;
   right: 5%;
   bottom: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+
+  a:active {
+    color: var(--purple);
+  }
 `
 const EmailContainer = styled.div`
   display: flex;
@@ -31,18 +44,17 @@ function EmailStrip() {
   return (
     <EmailStripContainer>
       <EmailContainer>
-        <Link to="/">
-          <p
-            style={{
-              writingMode: "vertical-rl",
-              fontSize: "14px",
-              textDecoration: "none",
-              color: "var(--slate)",
-            }}
-          >
-            mauricetjmurphy@gmail.com
-          </p>
-        </Link>
+        <a
+          href="mailto:mauricetjmurphy@gmail.com"
+          style={{
+            writingMode: "vertical-rl",
+            fontSize: "14px",
+            textDecoration: "none",
+            color: "var(--slate)",
+          }}
+        >
+          mauricetjmurphy@gmail.com
+        </a>
       </EmailContainer>
       <span style={strip}></span>
     </EmailStripContainer>
