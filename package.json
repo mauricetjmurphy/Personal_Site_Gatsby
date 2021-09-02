@@ -1,9 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "maurice-murphy",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A personal portfolio website to showcase my latest work",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Maurice Murphy",
+  "engines": {
+    "node": "14.17.5"
+  },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
     "babel-plugin-styled-components": "^1.13.2",
