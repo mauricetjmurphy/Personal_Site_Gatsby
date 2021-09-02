@@ -76,11 +76,10 @@ const HeroContainer = styled.section`
     cursor: pointer;
 
     @media (min-width: 768px) {
-      padding-top: 30px;
+      padding-top: 50px;
     }
-
     @media screen and (max-width: 480px) {
-      padding-top: 30px;
+      padding-top: 50px !important;
     }
   }
 `

@@ -84,10 +84,10 @@ const ImageContainer = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 100%;
+    width: 250px;
+    height: 250px;
     padding: 20px 0;
-    margin: 0;
-    height: 280px;
+    margin: 0 auto;
   }
 
   img {
@@ -100,8 +100,6 @@ const ImageContainer = styled.div`
     @media (max-width: 480px) {
       padding: 0;
       margin: 0 auto;
-      width: 250px;
-      height: 250px;
     }
   }
 `
@@ -126,6 +124,7 @@ const Technologies = styled.div`
     text-align: center;
     width: 90%;
     margin: 20px auto;
+    padding-top: 30px;
   }
 
   @media (max-width: 768px) {

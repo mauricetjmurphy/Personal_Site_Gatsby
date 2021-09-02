@@ -6,7 +6,6 @@
  */
 
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Header from "../header"
 import Navbar from "../Navbar/Navbar"
 import SocialStrip from "../SocialStrip"
