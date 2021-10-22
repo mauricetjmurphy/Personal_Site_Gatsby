@@ -85,7 +85,7 @@ const Projects = () => {
       <Title number={"02."} title={"Projects"} />
       <ProjectItem>
         <ProjectImageContainer
-          href="https://the-foodie-app.herokuapp.com/login?next=%2F"
+          href="https://the-foodie-app.herokuapp.com"
           target="_blank"
           rel="noreferrer"
         >
@@ -100,7 +100,7 @@ const Projects = () => {
           projectDesciption={projectData[0].projectDescription}
           technologies={projectData[0].technologies}
           gitHubUrl={"https://github.com/mauricetjmurphy/The_Foodie_Flask_App"}
-          websiteUrl={"https://the-foodie-app.herokuapp.com/login?next=%2F"}
+          websiteUrl={"https://the-foodie-app.herokuapp.com"}
         />
       </ProjectItem>
       <ProjectItem>
