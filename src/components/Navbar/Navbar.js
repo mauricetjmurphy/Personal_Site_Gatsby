@@ -153,7 +153,7 @@ function Navbar({ isOpen, toggleSidebar, menuLinks }) {
             </Link>
           </LinkItem>
         ))}
-        <Resume href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <Resume href="/Maurice_Murphy.pdf" target="_blank" rel="noopener noreferrer">
           Resume
         </Resume>
       </NavLinks>
